@@ -1,0 +1,205 @@
+/* Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+// varibles
+
+$primary-color: #786ce6;
+$secondary-color: #323234;
+// 100vh minus header height
+$page-min-height : calc(100vh - 91px);
+
+// Extends
+%grid-center {
+  display: grid;
+  place-items: center;
+}
+
+%name-heading {
+  font-weight: 600;
+  b{
+    color: $primary-color;
+  }
+}
+
+//  Common Css 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: $primary-color;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;  
+  margin: 0 auto;
+}
+
+.cta{
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 7px 20px;
+  transition: 0.3s linear;
+}
+
+.cta-big{
+  font-size: 18px;
+  padding: 15px 30px;
+}
+
+.cta-light{
+  border: 1px solid $primary-color;
+}
+
+.cta-light:hover{
+  color: #fff;
+  background-color: $primary-color;
+}
+
+.cta-dark{
+  color: #fff;
+  background-color: $primary-color;
+}
+.cta-dark:hover{
+  color: $primary-color;
+  background-color: #fff;
+}
+
+.text-white{
+  color: #fff;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.d-inline-block{
+  display: inline-block;
+}
+
+.d-block{
+  display: block;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+body{
+  background: $secondary-color;
+}
+
+.form_control_label{
+  margin-bottom: 5px;
+} 
+
+.form_control{
+  padding: 10px 15px;
+  box-shadow : inset 0 0 0 1px rgba($color: $primary-color, $alpha: 0.5);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  color: $secondary-color;
+}
+
+.form_control:focus{
+  box-shadow : inset 0 0 0 2px rgba($color: $primary-color, $alpha: 1);
+}
+
+// Header
+.header{
+  background-color: #fff;
+  padding: 25px 0;
+}
+
+.nav_list{
+  gap: 20px;
+}
+
+
+
+// Index Hero Sec
+.hero_sec{
+  height: $page-min-height;
+  display: grid;
+  place-items: center;
+}
+
+.hero_heading{
+  font-size: 60px;
+  max-width: 900px;
+  margin-bottom: 20px;
+  @extend %name-heading;
+}
+
+//  Account page
+.account_sec{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: $page-min-height;
+}
+
+.account_sec_img{
+  position: relative;
+}
+
+.account_sec_content{
+  padding: 50px;
+  @extend  %grid-center;
+}
+
+
+.account_sec_heading{
+  font-size: 34px;
+  margin-bottom: 5px;
+  @extend %name-heading;
+}
+
+.account_form{
+  margin-top: 25px;
+}
+
+.form_group:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.account_sec_inner{
+  max-width: 400px;
+  width: 100%;
+}
+
+.password_wrap{
+  position: relative;
+}
+.togglePassword{
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
